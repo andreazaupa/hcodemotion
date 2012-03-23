@@ -1,0 +1,11 @@
+<div class="page-header">
+    <h1>New page</h1>
+</div>
+
+<% form_for(page, {action: path_to.pages, method: 'POST', id: "page_form", class: 'form-horizontal'}, function (form) { %>
+    <%- partial('pages/form.ejs', {locals: {form: form, page: page}}) %>
+    <div class="form-actions">
+        <%- form.submit('<i class="icon-ok icon-white"></i> Create page', {class: 'btn btn-primary'}) %> or
+        <%- link_to('Cancel', path_to.pages, {class: 'btn'}) %>
+    </div>
+<% });%>

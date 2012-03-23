@@ -1,0 +1,11 @@
+<div class="page-header">
+    <h1>New tweet</h1>
+</div>
+
+<% form_for(tweet, {action: path_to.tweets, method: 'POST', id: "tweet_form", class: 'form-horizontal'}, function (form) { %>
+    <%- partial('tweets/form.ejs', {locals: {form: form, tweet: tweet}}) %>
+    <div class="form-actions">
+        <%- form.submit('<i class="icon-ok icon-white"></i> Create tweet', {class: 'btn btn-primary'}) %> or
+        <%- link_to('Cancel', path_to.tweets, {class: 'btn'}) %>
+    </div>
+<% });%>

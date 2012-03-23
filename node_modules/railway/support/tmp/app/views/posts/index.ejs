@@ -1,0 +1,21 @@
+<div class="page-header">
+  <h1>Index of post</h1>
+</div>
+
+<% posts.forEach(function (post) { %>
+<div class="row">
+  <div class="span-two-thirds">
+    post #<%= post.id %>
+  </div>
+  <div class="span-one-third">
+    <%- link_to('Edit', path_to.edit_post(post), {class: 'btn primary'}) %>
+    <%- link_to('Delete', path_to.post(post), {class: 'btn danger', method: 'delete', remote: true, jsonp: '(function (u) {location.href = u;})'}) %>
+  </div>
+</div>
+<% }); %>
+
+<hr/>
+
+<div class="well">
+  <%- link_to('New post', path_to.new_post, {class: 'btn'}) %>
+</div>

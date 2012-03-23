@@ -5,6 +5,7 @@
 , "dependencies":
   { "ejs":       ">= 0"
   , "ejs-ext":   ">= 0"
+  , "twitter-node": ">=0"
   , "express":          ">= 2.2.2"
   , "connect":          ">= 1.4.2"
   , "railway":          ">= 0.1.6"
